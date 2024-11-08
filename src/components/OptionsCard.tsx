@@ -1,12 +1,12 @@
 'use client'
 
 import React, { useState } from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent, CardHeader, CardFooter } from "./ui/card";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Button, buttonVariants } from "./ui/button";
 import { cn } from "../lib/utils";
-import { CalendarIcon, RefreshCcw } from 'lucide-react';
+import { RefreshCcw } from 'lucide-react';
 import bitcoin from '../../public/images/bitcoin.png'
 import ethereum from '../../public/images/ethereum.png'
 import solana from '../../public/images/solana.png'

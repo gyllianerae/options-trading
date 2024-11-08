@@ -1,5 +1,5 @@
 "use client"
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { Button } from "./ui/button";
 import Image from "next/image";
 import solfare from '../../public/images/solfare.png'
@@ -40,12 +40,11 @@ interface NavbarProps {
 }
 
 export default function WalletModal({ onConnectWallet }: NavbarProps) {
-    const [activeIndex, setActiveIndex] = useState(null);
     const modalRef = useRef<HTMLDivElement | null>(null);
 
-    const handleConnectWallet = () => {
-        onConnectWallet(false);
-    }
+    // const handleConnectWallet = () => {
+    //     onConnectWallet(false);
+    // }
 
     const handleCLickOutside = (e: React.MouseEvent) => {
         if(modalRef.current && !modalRef.current.contains(e.target as Node)) {
@@ -121,7 +120,7 @@ export default function WalletModal({ onConnectWallet }: NavbarProps) {
                         
                         {collapsibleWalets.map((wallet, index) => (
                             <CollapsibleContent>
-                               <li className="cursor-pointer p-2 hover:bg-gray-200 rounded flex items-center gap-2 border border-gray-300">
+                               <li key={index} className="cursor-pointer p-2 hover:bg-gray-200 rounded flex items-center gap-2 border border-gray-300">
                                     {wallet.icon && wallet.icon !== "" ? (
                                         <Image
                                             src={wallet.icon}

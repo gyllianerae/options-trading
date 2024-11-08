@@ -10,7 +10,7 @@ export default function Home() {
   const  [walletModal, setWalletModal] = useState<boolean>(false);
 
   //to handle wallet modal state
-  const handleWalletModal = (option: boolean) => {
+  const handleWalletModal = () => {
     setWalletModal(!walletModal);
   }
 
