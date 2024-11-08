@@ -119,8 +119,8 @@ export default function WalletModal({ onConnectWallet }: NavbarProps) {
                         {/* collapsible wallets */}
                         
                         {collapsibleWalets.map((wallet, index) => (
-                            <CollapsibleContent>
-                               <li key={index} className="cursor-pointer p-2 hover:bg-gray-200 rounded flex items-center gap-2 border border-gray-300">
+                            <CollapsibleContent key={index}>
+                               <li className="cursor-pointer p-2 hover:bg-gray-200 rounded flex items-center gap-2 border border-gray-300">
                                     {wallet.icon && wallet.icon !== "" ? (
                                         <Image
                                             src={wallet.icon}
